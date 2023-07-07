@@ -1,0 +1,67 @@
+.modal {
+    width: 68vw;
+    height: 74vh;
+    background-color: #262D35;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__character {
+        align-self: self-end;
+        object-position: top;
+        height: 90%;
+    }
+
+    &__menu {
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__rigth {
+        width: 36vw;
+
+    }
+
+    &__back{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+    }
+    
+
+    &__name {
+        margin: 0 2vw;
+        font-size: 2em;
+        line-height: 2.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: white;
+        justify-content: space-between;
+        color: white;
+
+        &__input {
+                color: white;
+                height: 100%;
+                width: 60%;
+                background-color: #97a0aa00;
+                border: 0 solid;
+                font-size: 34px;
+
+                &:focus{
+                    outline: 0 solid;
+                    border: 0 solid;
+                }
+                &::placeholder{
+                    font-size: 16px;
+                }
+
+            }
+
+    }
+
+}

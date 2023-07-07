@@ -1,0 +1,23 @@
+.modal{
+
+    &__stats {
+
+            margin: 0 2vw;
+            margin-top: 1rem;
+    
+            &__property {
+    
+                padding: 0.5rem;
+                padding-left: 1rem;
+                color: #d0d0d0;
+            }
+    
+            &__properties {
+    
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+        }
+}

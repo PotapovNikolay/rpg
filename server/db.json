@@ -1,0 +1,93 @@
+{
+  "characters": {
+    "name": "2222",
+    "characteristics": {
+      "strength": {
+        "name": "Сила",
+        "value": 0,
+        "skills": {
+          "attack": {
+            "level": 0,
+            "name": "атака",
+            "icon": "/src/assets/icons/skills/hammer-drop.svg"
+          }
+        }
+      },
+      "agility": {
+        "name": "Ловкость",
+        "value": 0,
+        "skills": {
+          "stealth": {
+            "level": 0,
+            "name": "скрытность",
+            "icon": "/src/assets/icons/skills/stealth-bomber.svg"
+          },
+          "archery": {
+            "level": 0,
+            "name": "стрельба из лука",
+            "icon": "/src/assets/icons/skills/high-shot.svg"
+          }
+        }
+      },
+      "intelligence": {
+        "name": "Интеллект",
+        "value": 0,
+        "skills": {
+          "trainability": {
+            "level": 0,
+            "name": "обучаемость",
+            "icon": "/src/assets/icons/skills/book-cover.svg"
+          },
+          "survival": {
+            "level": 0,
+            "name": "выживание",
+            "icon": "/src/assets/icons/skills/island.svg"
+          },
+          "medicine": {
+            "level": 0,
+            "name": "медицина",
+            "icon": "/src/assets/icons/skills/caduceus.svg"
+          }
+        }
+      },
+      "charisma": {
+        "name": "Харизма",
+        "value": 0,
+        "skills": {
+          "intimidation": {
+            "level": 0,
+            "name": "запугивание",
+            "icon": "/src/assets/icons/skills/energy-breath.svg"
+          },
+          "insight": {
+            "level": 0,
+            "name": "проницательность",
+            "icon": "/src/assets/icons/skills/sing.svg"
+          },
+          "appearance": {
+            "level": 0,
+            "name": "внешний вид",
+            "icon": "/src/assets/icons/skills/seahorse.svg"
+          },
+          "manipulation": {
+            "level": 0,
+            "name": "манипулирование",
+            "icon": "/src/assets/icons/skills/voodoo-doll.svg"
+          }
+        }
+      },
+      "health": {
+        "name": "Здоровье",
+        "value": 3
+      },
+      "evasion": {
+        "name": "Уклонение",
+        "value": 3
+      },
+      "energy": {
+        "name": "Энергия",
+        "value": 0
+      }
+    }
+  }
+}

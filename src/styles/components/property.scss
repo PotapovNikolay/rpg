@@ -1,0 +1,17 @@
+
+.property{
+    background-color: black;
+    border-radius: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:   0.3rem 1rem ;
+    color: white;
+
+    &__point{
+
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+}

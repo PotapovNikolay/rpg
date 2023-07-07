@@ -1,0 +1,66 @@
+.modal{
+
+    &__skills {
+    
+            margin: 0 2vw;
+            margin-top: 1rem;
+            display: flex;
+            padding: 0.3rem 0.5rem;
+            position: relative;
+
+            &__button {
+                // margin: 0 0.3rem;
+                position: relative;
+    
+                &-active {
+                    position: relative;
+                    background-color: #edf72f !important;
+                    border-radius: 10px;
+                }
+            }
+    
+            &__slider {
+    
+    
+                overflow: hidden;
+            }
+        }
+}
+
+.skills-stars{
+
+    border: 2px #1f1f1f solid ;
+    border-radius: 20rem;
+    padding-left: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &__image{
+        padding: 0.2rem;
+        height: 1.1rem;
+    }
+
+    &__button{
+
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1f1f1f;
+        border: 2px #8b8b8b solid;
+        outline: 2px solid #1f1f1f;
+        border-radius: 20rem;
+        width: 4rem;
+        height: 2.2rem;
+        cursor: pointer;
+
+        & img{
+            transform: scale(1.5);
+        }
+        
+    }
+}
