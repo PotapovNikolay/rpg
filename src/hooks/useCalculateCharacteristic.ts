@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "store";
 import { BaseCharacteristics } from "types/character";
-import { calculateEnergy, calculateEvasion, calculateHealth } from "store/slices/character/characterSlice";
+import { calculateEnergy, calculateEvasion, calculateHealth } from "store/slices/character/slice";
 
 
 export const useCalculateCharacteristic = () =>{
@@ -16,8 +16,8 @@ export const useCalculateCharacteristic = () =>{
             break;
             case BaseCharacteristics.agility:
               dispatch(calculateEvasion())
+              dispatch(calculateEnergy())
             break;
-            case BaseCharacteristics.agility:
             case BaseCharacteristics.intelligence:
               dispatch(calculateEnergy())
             break;

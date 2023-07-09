@@ -1,12 +1,12 @@
-import { ICharacteristic } from "@/src/types/character";
+import { ICharacteristic } from "types/character";
 import { dashCircleFill, plusCircleFill } from "icons/interface";
 import { AppDispatch } from "store";
 import { useDispatch } from "react-redux";
 import {
     characteristicDown,
     characteristicUp,
-} from "store/slices/character/characterSlice";
-import { useCalculateCharacteristic } from "../../hooks/useCalculateCharacteristic";
+} from "store/slices/character/slice";
+import { useCalculateCharacteristic } from "hooks/useCalculateCharacteristic";
 import { useEffect } from "react";
 
 interface BaseCharacteristicProps {
@@ -19,14 +19,14 @@ export const BaseCharacteristic: React.FC<BaseCharacteristicProps> = ({
     const dispatch = useDispatch<AppDispatch>();
     const calculateCharacteristic = useCalculateCharacteristic();
 
-    useEffect(()=>{
+    useEffect(() => {
         calculateCharacteristic(name);
-    }, [])
+    }, []);
 
     return (
-        <div className="property">
+        <div className="characteristic">
             <div>{name}</div>
-            <div className="property__point">
+            <div className="characteristic__point">
                 <button
                     onClick={() => {
                         dispatch(characteristicDown(characteristicKey));

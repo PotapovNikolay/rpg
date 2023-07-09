@@ -1,30 +1,29 @@
-import { toBack } from 'icons/interface';
-import character from '../../../public/images/character.png'
-import { Skills } from '../skills/Skills';
-import { Name } from './Name';
-import { Stats } from './Stats';
-import { useDispatch } from 'react-redux';
-import { AppDispatch } from 'store';
-import { toggleModal } from 'store/slices/modal/modalSlice';
+import { Skills } from "components/skills/Skills";
+import { Characteristics } from "./Characteristics";
+import { Name } from "./Name";
+import { Image } from "./Image";
+import { Back } from "./buttons/Back";
+import { useAppSelector } from "store";
+import { Preloader } from "../preloader/Preloader";
 
 interface ModalProps {}
 
 export const Modal: React.FC<ModalProps> = () => {
-
-    const dispatch = useDispatch<AppDispatch>();
+    const { preloader } = useAppSelector((state) => state.modal);
 
     return (
         <div className="modal">
-            <img src={character} alt="character" className="modal__character" />
-            {/* <Menu /> */}
-            <div className="modal__rigth">
-                <Name />
-                <Stats />
-                <Skills />
-            </div>
-            <button onClick={()=>{dispatch(toggleModal());}} className="button modal__back">
-                <img src={toBack} width={50} alt="назад" />
-            </button>
+            {preloader && <Preloader />}
+            <Image />
+            {!preloader && (
+                <div className="modal__rigth fade-in">
+                    <Name />
+                    <Characteristics />
+                    <Skills />
+                </div>
+            )}
+
+            <Back />
         </div>
     );
 };

@@ -1,15 +1,27 @@
 
-import TextField from "@mui/material/TextField";
 
 interface InputProps {
-    label: string;
+    placeHolder: string;
+    value: string;
+    action(value: string): void;
+    className:string
 }
 
-export const StyledInput: React.FC<InputProps> = ({ label }) => {
+export const Input: React.FC<InputProps> = ({
+    placeHolder,
+    value,
+    action,
+    className,
+}) => {
     return (
-        <TextField
-            label={label}
-            variant="outlined"
+        <input
+            onChange={(e) => {
+                action(e.target.value);
+            }}
+            type="text"
+            className={className}
+            placeholder={placeHolder}
+            value={value}
         />
     );
 };

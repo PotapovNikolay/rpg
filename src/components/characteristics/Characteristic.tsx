@@ -8,9 +8,9 @@ export const Characteristic: React.FC<CharacteristicProps> = ({
     characteristic: [characteristicKey, { name, value }],
 }) => {
     return (
-        <div className="property">
+        <div className="characteristic">
             <div>{name}</div>
-            <div className="property__point">
+            <div className="characteristic__point">
                 <div>{value}</div>
             </div>
         </div>

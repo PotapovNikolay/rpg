@@ -1,7 +1,7 @@
 import {  configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useSelector } from "react-redux";
-import { characterSlice } from "./slices/character/characterSlice";
-import { modalSlice } from "./slices/modal/modalSlice";
+import { characterSlice } from "./slices/character/slice";
+import { modalSlice } from "./slices/modal/slice";
 
 export const store = configureStore({
     reducer: {

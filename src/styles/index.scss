@@ -1,69 +1,89 @@
-@import './characteristic/index.scss';
-@import './components/index.scss';
-@import './slider/index.scss';
+@import "./characteristic/index.scss";
+@import "./components/index.scss";
+@import "./slider/index.scss";
+@import './animations/index.scss';
 
-body{
-    overflow: hidden;
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
     font-family: "Gill Sans", sans-serif;
+    margin: 0;
+    background-image: url("../assets/images/peakpx.jpg");
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vh;
+    height: 100vh;
+
 }
 
-.main{
+body::before{
 
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-
-    &__column{
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &__button{
-
-            margin-top: 1rem;
-            border-radius: 10px;
-            padding: 1rem 1rem;
-
-            color:white
-        }
-    }
-    
+    content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.304);
+        /* Прозрачность можно настроить здесь */
 }
 
-.box{
+.box {
     background-color: #414141;
-        border: #9f9f9f 2px solid;
-        border-radius: 1rem;
+    border: #9f9f9f 2px solid;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 10px 0 rgba(255, 255, 255, 0.15);
+    border: 2px solid #cbced1;
 }
 
-.h3{
-
+.h3 {
     font-size: 2em;
     font-weight: 600;
+    white-space: nowrap;
 }
 
-.button{
-
-    color:inherit;
+.button {
+    color: inherit;
     background-color: #00000000;
     cursor: pointer;
     border: 0 solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    &-primary {
+        color: white;
+        cursor: pointer;
+        border-radius: 1rem;
+        font-weight: 600;
+        padding: 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: 4px 4px 10px 0 rgba(255, 255, 255, 0.15);
+        border: 2px solid #cbced1;
+    }
 }
 
+.mx {
+    margin: 0 1rem;
+}
 
+.cursor {
+    cursor: pointer;
+}
 
-.row{
+.row {
     display: flex;
 
-    button{
+    button {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }

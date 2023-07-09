@@ -1,0 +1,24 @@
+.characteristics {
+    margin: 0 2vw;
+    margin-top: 1rem;
+
+    &__text {
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    &__characteristic {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+
+        @media screen and (max-width: 800px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__health {
+        padding-top: 1rem;
+    }
+}

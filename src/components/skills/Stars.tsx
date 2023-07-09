@@ -1,43 +1,44 @@
 import { AppDispatch, useAppSelector } from "store";
 import { starFill, starNoFill, chevronDoubleRight } from "icons/interface";
 import { useDispatch } from "react-redux";
-import { skillUp } from "store/slices/character/characterSlice";
+import { skillUp } from "store/slices/character/slice";
 
-interface SkillStarsProps {}
+interface StarsProps {}
 
-export const SkillStars: React.FC<SkillStarsProps> = () => {
+export const Stars: React.FC<StarsProps> = () => {
     const dispatch = useDispatch<AppDispatch>();
     const { currentSkill } = useAppSelector((state) => state.character);
 
-
     return (
-        <div className="skills-stars">
-            <div>
+        <div className="stars">
+            <div className="stars__container">
                 {Array.from({ length: currentSkill.level }, (value, key) => {
-                    
                     return (
                         <img
                             key={key}
                             src={starFill}
-                            className="skills-stars__image"
+                            className="stars__image"
                         />
                     );
                 })}
-                {Array.from({ length: 5 - currentSkill.level }, (value, key) => {
-                    return (
-                        <img
-                            key={key}
-                            src={starNoFill}
-                            className="skills-stars__image"
-                        />
-                    );
-                })}
+                {Array.from(
+                    { length: 5 - currentSkill.level },
+                    (value, key) => {
+                        return (
+                            <img
+                                key={key}
+                                src={starNoFill}
+                                className="stars__image"
+                            />
+                        );
+                    }
+                )}
             </div>
             <button
                 onClick={() => {
                     dispatch(skillUp(currentSkill));
                 }}
-                className="skills-stars__button"
+                className="stars__button"
             >
                 <img src={chevronDoubleRight} alt="img" />
             </button>

@@ -1,14 +1,14 @@
 {
   "characters": {
-    "name": "2222",
+    "name": "Мария",
     "characteristics": {
       "strength": {
         "name": "Сила",
-        "value": 0,
+        "value": 3,
         "skills": {
           "attack": {
             "level": 0,
-            "name": "атака",
+            "name": "Атака",
             "icon": "/src/assets/icons/skills/hammer-drop.svg"
           }
         }
@@ -19,12 +19,12 @@
         "skills": {
           "stealth": {
             "level": 0,
-            "name": "скрытность",
+            "name": "Скрытность",
             "icon": "/src/assets/icons/skills/stealth-bomber.svg"
           },
           "archery": {
             "level": 0,
-            "name": "стрельба из лука",
+            "name": "Стрельба из лука",
             "icon": "/src/assets/icons/skills/high-shot.svg"
           }
         }
@@ -35,54 +35,54 @@
         "skills": {
           "trainability": {
             "level": 0,
-            "name": "обучаемость",
+            "name": "Обучаемость",
             "icon": "/src/assets/icons/skills/book-cover.svg"
           },
           "survival": {
             "level": 0,
-            "name": "выживание",
+            "name": "Выживание",
             "icon": "/src/assets/icons/skills/island.svg"
           },
           "medicine": {
             "level": 0,
-            "name": "медицина",
+            "name": "Медицина",
             "icon": "/src/assets/icons/skills/caduceus.svg"
           }
         }
       },
       "charisma": {
         "name": "Харизма",
-        "value": 0,
+        "value": 3,
         "skills": {
           "intimidation": {
             "level": 0,
-            "name": "запугивание",
+            "name": "Запугивание",
             "icon": "/src/assets/icons/skills/energy-breath.svg"
           },
           "insight": {
             "level": 0,
-            "name": "проницательность",
+            "name": "Проницательность",
             "icon": "/src/assets/icons/skills/sing.svg"
           },
           "appearance": {
             "level": 0,
-            "name": "внешний вид",
+            "name": "Внешний вид",
             "icon": "/src/assets/icons/skills/seahorse.svg"
           },
           "manipulation": {
             "level": 0,
-            "name": "манипулирование",
+            "name": "Манипулирование",
             "icon": "/src/assets/icons/skills/voodoo-doll.svg"
           }
         }
       },
       "health": {
         "name": "Здоровье",
-        "value": 3
+        "value": 6
       },
       "evasion": {
         "name": "Уклонение",
-        "value": 3
+        "value": 10
       },
       "energy": {
         "name": "Энергия",

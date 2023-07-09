@@ -1,33 +1,35 @@
 import { AppDispatch, useAppSelector } from "store";
 import { useDispatch } from "react-redux";
-import { saveCharacter, setName } from "store/slices/character/characterSlice";
-import { Button } from "../base/Button";
+import { saveCharacter, setName } from "store/slices/character/slice";
+import { Input } from "components/base/Input";
 
-interface NameProps{}
+interface NameProps {}
 
 export const Name: React.FC<NameProps> = () => {
-
-    const {name} =  useAppSelector((state) => state.character.character);
+    const { name } = useAppSelector((state) => state.character.character);
     const dispatch = useDispatch<AppDispatch>();
 
     return (
-        <div className="modal__name modal__child  box row">
-            <input
-                onChange={(e) => {
-                    dispatch(setName(e.target.value));
-                }}
-                type="text"
-                className="modal__name__input"
-                placeholder="введите имя здесь"
-                value={name}
-            />
-            <Button
-                action={() => {
+        <div className="modal__child  row naming__mx">
+            <div className="naming box ">
+                <Input
+                    value={name}
+                    placeHolder="введите имя здесь"
+                    className="naming__input"
+                    action={(value) => {
+                        dispatch(setName(value));
+                    }}
+                />
+            </div>
+            <div
+                onClick={() => {
                     dispatch(saveCharacter());
                 }}
+                className="box cursor"
+                style={{ color: "white" }}
             >
-                <span style={{ color: "white" }}>Сохранить</span>{" "}
-            </Button>
+                Сохранить
+            </div>
         </div>
     );
 };

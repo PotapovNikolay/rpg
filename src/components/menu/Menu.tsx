@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
-import { Button } from "components/base/Button";
+import { ButtonPrimary } from "components/base/ButtonPrimary";
 import { AppDispatch, useAppSelector } from "store";
-import { setProcessEdit, toggleModal } from "store/slices/modal/modalSlice";
-import { getCharacter } from "store/slices/character/characterSlice";
+import { setProcessEdit, toggleModal } from "store/slices/modal/slice";
+import { getCharacter } from "store/slices/character/slice";
 
 interface MenuProps {}
 
@@ -13,31 +13,31 @@ export const Menu: React.FC<MenuProps> = () => {
     return (
         <div className="modal__menu">
             {process == "create" ? (
-                <Button
+                <ButtonPrimary
                     action={() => {
                         dispatch(setProcessEdit());
                         dispatch(toggleModal());
                     }}
                 >
                     Создать
-                </Button>
+                </ButtonPrimary>
             ) : (
-                <Button
+                <ButtonPrimary
                     action={() => {
                         dispatch(toggleModal());
                     }}
                 >
-                    Редактировать
-                </Button>
+                    Вернуться к созданию персонажа
+                </ButtonPrimary>
             )}
-            <Button
+            <ButtonPrimary
                 action={() => {
                     dispatch(getCharacter());
                     dispatch(toggleModal());
                 }}
             >
                 Загрузить
-            </Button>
+            </ButtonPrimary>
         </div>
     );
 };

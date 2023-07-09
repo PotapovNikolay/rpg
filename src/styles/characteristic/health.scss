@@ -1,18 +1,15 @@
-
-
-.health{
-
+.health {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 24px;
     color: white;
     padding: 0.2rem 1rem;
-    border: 3px #f6ff00 solid;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 3px #fbf307 solid;
+    outline: 2px solid #1f1f1f;
     border-radius: 20rem;
 
-    &__point{
-
-
+    &__point {
     }
 }
