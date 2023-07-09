@@ -8,6 +8,6 @@ export const process = {
         state.process = "edit";
     },
     togglePreloader: (state: IInitialState) => {
-        state.preloader = !state.preloader;
+        state.preloader = false;
     },
 };
