@@ -1,7 +1,7 @@
 @import "./characteristic/index.scss";
 @import "./components/index.scss";
 @import "./slider/index.scss";
-@import './animations/index.scss';
+@import "./animations/index.scss";
 
 body {
     overflow-y: auto;
@@ -15,18 +15,21 @@ body {
     width: 100vh;
     height: 100vh;
 
+    @media screen and (max-width: 800px) {
+        background-size: auto;
+        
+    }
 }
 
-body::before{
-
+body::before {
     content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.304);
-        /* Прозрачность можно настроить здесь */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.304);
+    /* Прозрачность можно настроить здесь */
 }
 
 .box {
