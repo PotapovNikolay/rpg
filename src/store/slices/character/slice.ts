@@ -69,6 +69,7 @@ export const {
     setCharacter,
     calculateEnergy,
     getDamage,
+    getHill,
     characteristicUp,
     characteristicDown,
     skillUp,

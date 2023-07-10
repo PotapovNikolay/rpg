@@ -1,5 +1,5 @@
 import { AppDispatch } from "store";
-import { getDamage } from "store/slices/character/slice";
+import { getDamage, getHill } from "store/slices/character/slice";
 import { toggleModal } from "store/slices/modal/slice";
 import { useDispatch } from "react-redux";
 import { ButtonPrimary } from "components/base/ButtonPrimary";
@@ -25,6 +25,14 @@ export const Actions: React.FC<ActionsProps> = () => {
                 }}
             >
                 Получить урон
+            </ButtonPrimary>
+
+            <ButtonPrimary
+                action={() => {
+                    dispatch(getHill());
+                }}
+            >
+                Подлечиться
             </ButtonPrimary>
         </div>
     );

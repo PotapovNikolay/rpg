@@ -1,7 +1,6 @@
 import { BaseCharacteristics, ICharacter, LevelOfSkill, Characteristics, Skills } from "types/character";
 import {
     book,
-    bully,
     caduceus,
     breath,
     hammer,
@@ -15,6 +14,7 @@ import {
 
 export const character :ICharacter ={
         name:'moclay',
+        currentHealth:0,
         characteristics:{
             strength:{
                 name:BaseCharacteristics.strength,

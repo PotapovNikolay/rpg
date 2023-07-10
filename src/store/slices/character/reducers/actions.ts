@@ -5,17 +5,27 @@ import { ICharacter } from "types/character";
 
 export const actions = {
     getDamage: (state: IInitialState) => {
-        const healthPoints = state.character.characteristics.health.value;
 
-        if (healthPoints === 1) {
+        if (state.character.currentHealth === 1) {
             state.info = "Вы умерли(";
             state.character = character;
             return;
         }
 
-        if (healthPoints > 0) {
-            state.character.characteristics.health.value--;
+        if (state.character.currentHealth > 0) {
+            state.character.currentHealth--;
         }
+    },
+
+    getHill:(state: IInitialState) =>{
+
+        if (state.character.characteristics.health.value == state.character.currentHealth) {
+            
+            state.info = "Вы полность здоровы";
+            return
+        }
+
+        state.character.currentHealth++
     },
 
     setName: (state: IInitialState, action: PayloadAction<string>) => {

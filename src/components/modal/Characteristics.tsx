@@ -6,8 +6,8 @@ import { Health } from "../characteristics/Health";
 interface CharacteristicsProps {}
 
 export const Characteristics: React.FC<CharacteristicsProps> = () => {
-    const { characteristics } = useAppSelector(
-        (state) => state.character.character
+    const { character } = useAppSelector(
+        (state) => state.character
     );
 
     return (
@@ -15,10 +15,10 @@ export const Characteristics: React.FC<CharacteristicsProps> = () => {
             <div className="characteristics__text">Характеристики</div>
 
             <div className="characteristics__health">
-                <Health value={characteristics.health.value} />
+                <Health health={character.characteristics.health.value} currentHealth={character.currentHealth} />
             </div>
             <div className="characteristics__characteristic">
-                {Object.entries(characteristics).map((characteristic, key) => {
+                {Object.entries(character.characteristics).map((characteristic, key) => {
                     if (!("skills" in characteristic[1])) return;
 
                     return (
@@ -30,7 +30,7 @@ export const Characteristics: React.FC<CharacteristicsProps> = () => {
                 })}
             </div>
             <div className="characteristics__characteristic">
-                {Object.entries(characteristics).map((characteristic, key) => {
+                {Object.entries(character.characteristics).map((characteristic, key) => {
                     if (
                         "skills" in characteristic[1] ||
                         characteristic[0] === "health"

@@ -1,13 +1,16 @@
 
 interface HealthProps{
-    value:number
+    health:number,
+    currentHealth:number,
 }
 
-export const Health: React.FC<HealthProps> = ({ value }) => {
+export const Health: React.FC<HealthProps> = ({ health, currentHealth }) => {
     return (
         <div className="health">
             <div>Здоровье</div>
-            <div className="health__point">{value}</div>
+            <div className="health__point">
+                {currentHealth} / {health}
+            </div>
         </div>
     );
 };

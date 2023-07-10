@@ -1,27 +1,35 @@
 import { IInitialState } from "../type";
 
-
-export const calculation ={
-
+export const calculation = {
     calculateHealth: (state: IInitialState) => {
-
-            // if (state.character.characteristics.health.value<3) {
-            //     state.character.characteristics.health.value = state.character.characteristics.health.value + state.character.characteristics.strength.value
-            // }
-            // else{
-                state.character.characteristics.health.value =
+        // if (state.character.characteristics.health.value<3) {
+        //     state.character.characteristics.health.value = state.character.characteristics.health.value + state.character.characteristics.strength.value
+        // }
+        // else{
+        if (
+            state.character.characteristics.health.value ==
+            state.character.currentHealth
+        ) {
+            state.character.characteristics.health.value =
                 state.character.characteristics.strength.value + 3;
-            // }
-        },
+            state.character.currentHealth =
+                state.character.characteristics.health.value;
+        } else {
+            state.character.characteristics.health.value =
+                state.character.characteristics.strength.value + 3;
+        }
 
-        calculateEvasion: (state: IInitialState) => {
-            state.character.characteristics.evasion.value =
-                state.character.characteristics.agility.value + 10;
-        },
+        // }
+    },
 
-        calculateEnergy: (state: IInitialState) => {
-            state.character.characteristics.energy.value =
-                state.character.characteristics.agility.value +
-                state.character.characteristics.intelligence.value;
-        },
-}
+    calculateEvasion: (state: IInitialState) => {
+        state.character.characteristics.evasion.value =
+            state.character.characteristics.agility.value + 10;
+    },
+
+    calculateEnergy: (state: IInitialState) => {
+        state.character.characteristics.energy.value =
+            state.character.characteristics.agility.value +
+            state.character.characteristics.intelligence.value;
+    },
+};

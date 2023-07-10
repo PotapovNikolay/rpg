@@ -50,5 +50,6 @@ export interface ICharacteristic{
 export interface ICharacter {
 
     name:string,
+    currentHealth:number,
     characteristics: {[index: string]:ICharacteristic},
 }
