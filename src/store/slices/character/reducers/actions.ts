@@ -34,5 +34,6 @@ export const actions = {
 
     setCharacter: (state: IInitialState, action: PayloadAction<ICharacter>) => {
         state.character = action.payload;
-    },
+    }
+
 };

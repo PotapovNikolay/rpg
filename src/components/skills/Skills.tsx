@@ -1,24 +1,15 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
-import { LegacyRef, createRef, useEffect, useRef } from "react";
+import {  useRef } from "react";
 import { useAppSelector } from "store";
 import { ToKnow } from "./ToKnow";
 import { Skill } from "./Skill";
 import { Arrows } from "./Arrows";
 
-const breakpoints = {
-    1200: {
-        perPage: 6,
-    },
-    1100: {
-        
-        // width:'52vw'
-    },
-};
 
-interface SkillsProps {}
-
-export const Skills: React.FC<SkillsProps> = () => {
+export const Skills: React.FC = () => {
     const { character } = useAppSelector((state) => state.character);
     const splideRef = useRef<Splide | null>();
 
@@ -40,7 +31,7 @@ export const Skills: React.FC<SkillsProps> = () => {
                             pagination: false,
                             arrows: false,
                             perPage: 6,
-                            
+
                         }}
                         ref={splideRef}
                     >
@@ -49,7 +40,7 @@ export const Skills: React.FC<SkillsProps> = () => {
                             {skillsArray.map((skill, key) => {
                                 if (!skill) return;
 
-                                const [index, value] = skill;
+                                const [, value] = skill;
 
                                 return (
                                     <SplideSlide key={key}>

@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Splide } from "@splidejs/react-splide";
 import { chevronLeft, chevronRight } from "icons/interface";
 

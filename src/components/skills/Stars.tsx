@@ -3,16 +3,14 @@ import { starFill, starNoFill, chevronDoubleRight } from "icons/interface";
 import { useDispatch } from "react-redux";
 import { skillUp } from "store/slices/character/slice";
 
-interface StarsProps {}
-
-export const Stars: React.FC<StarsProps> = () => {
+export const Stars: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
     const { currentSkill } = useAppSelector((state) => state.character);
 
     return (
         <div className="stars">
             <div className="stars__container">
-                {Array.from({ length: currentSkill.level }, (value, key) => {
+                {Array.from({ length: currentSkill.level }, (_, key) => {
                     return (
                         <img
                             key={key}
@@ -23,7 +21,7 @@ export const Stars: React.FC<StarsProps> = () => {
                 })}
                 {Array.from(
                     { length: 5 - currentSkill.level },
-                    (value, key) => {
+                    (_, key) => {
                         return (
                             <img
                                 key={key}

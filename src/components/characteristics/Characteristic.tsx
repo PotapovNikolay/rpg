@@ -5,7 +5,7 @@ interface CharacteristicProps {
 }
 
 export const Characteristic: React.FC<CharacteristicProps> = ({
-    characteristic: [characteristicKey, { name, value }],
+    characteristic: [, { name, value }],
 }) => {
     return (
         <div className="characteristic">

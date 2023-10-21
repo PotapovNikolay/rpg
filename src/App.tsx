@@ -5,10 +5,9 @@ import { useAppSelector } from "store";
 import { Actions } from "components/modal/buttons/Actions";
 import { Menu } from "components/menu/Menu";
 import { useToasts } from "hooks/index";
-import { Preloader } from "components/preloader/Preloader";
 
 function App() {
-    const { show, preloader } = useAppSelector((state) => state.modal);
+    const { show } = useAppSelector((state) => state.modal);
 
     useToasts();
 
